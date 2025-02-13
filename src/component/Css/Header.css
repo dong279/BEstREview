@@ -1,0 +1,28 @@
+#container_header {
+  display: flex; /* Flexbox로 설정 */
+  flex-direction: row; /* 요소들을 가로 방향으로 정렬 */
+  justify-content: space-between; /* 요소들 사이에 균등한 간격을 두기 */
+  align-items: center; /* 세로로 가운데 정렬 */
+  gap: 20px;
+  margin: 0 auto;
+}
+
+#text {
+  padding-top: 25px;
+  gap: 20px;
+  font-size: 29px;
+}
+#titlelogo {
+  width: 500px;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+#Nav_header {
+  width: 100%;
+}
+
+hr {
+  border: 2px solid #39278b;
+}
