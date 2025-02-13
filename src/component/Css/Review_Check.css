@@ -6,19 +6,37 @@
 .Review_Check_Logo {
   display: block;
   margin: 0 auto;
+  width: 10%;
+  height: 10%;
 }
-
 .Review_Check_input {
   width: 400;
   border-radius: 10px;
-  background-color: #c8cffe;
+  background-color: #9fa9e9;
   color: white;
   padding: 10px;
 }
+
+.Review_Check_input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.Review_Check_input:hover {
+  background-color: #9fa9e9;
+  border-color: #9fa9e9;
+}
+
+.Review_Check_input:focus {
+  background-color: #9fa9e9;
+  border-color: #9fa9e9;
+  color: white;
+}
+
 .button {
   margin-left: -50;
   border-radius: 10px;
-  color: #c8cffe;
+  color: #9fa9e9;
   background-color: white;
 }
 .url-input-container {
