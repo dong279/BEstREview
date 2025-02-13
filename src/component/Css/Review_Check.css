@@ -1,0 +1,26 @@
+.Review_text {
+  text-align: center;
+  color: #3a278b;
+  font-family: "KIMM_Bold", sans-serif;
+}
+.Review_Check_Logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.Review_Check_input {
+  width: 400;
+  border-radius: 10px;
+  background-color: #c8cffe;
+  color: white;
+  padding: 10px;
+}
+.button {
+  margin-left: -50;
+  border-radius: 10px;
+  color: #c8cffe;
+  background-color: white;
+}
+.url-input-container {
+  text-align: center;
+}

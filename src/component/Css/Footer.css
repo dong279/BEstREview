@@ -4,4 +4,8 @@
   align-items: center; /* 가로로 가운데 정렬 */
   justify-content: space-between; /* 텍스트 사이에 간격을 고르게 배치 */
   height: 50px;
+  font-family: "D2Coding", sans-serif;
+}
+* {
+  font-family: "D2Coding", sans-serif;
 }
