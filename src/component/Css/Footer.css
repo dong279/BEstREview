@@ -6,3 +6,9 @@
   height: 50px;
   font-family: "D2Coding", sans-serif;
 }
+
+#Footer_Nav {
+  width: 100%; /* 화면 전체 너비 */
+  height: 100px; /* 고정 높이 */
+  margin-top: auto;
+}

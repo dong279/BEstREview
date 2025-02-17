@@ -1,31 +1,37 @@
+/* 기본 헤더 스타일 */
 #container_header {
-  display: flex; /* Flexbox로 설정 */
-  flex-direction: row; /* 요소들을 가로 방향으로 정렬 */
-  justify-content: space-between; /* 요소들 사이에 균등한 간격을 두기 */
-  align-items: center; /* 세로로 가운데 정렬 */
-  gap: 20px;
+  display: flex;
+  justify-content: space-between; /* 기본적으로 로고 왼쪽, 메뉴 오른쪽 */
+  align-items: center;
+  gap: 3vw;
   margin: 0 auto;
+  min-width: 1200px; /* 최소 너비 설정 */
 }
 
 #text {
-  padding-top: 25px;
-  gap: 20px;
-  font-size: 29px;
+  padding-top: 1.5em;
+  gap: 1vw;
+  font-size: 2em;
 }
+
 #titlelogo {
   width: 500px;
   display: block;
   padding: 0;
   margin: 0;
+  min-width: 500px;
 }
 
 #Nav_header {
   width: 100%;
+  height: 150px;
+  min-width: 1200px;
 }
 
 hr {
   border: 2px solid #39278b;
 }
+
 * {
   font-family: "D2Coding", sans-serif;
 }

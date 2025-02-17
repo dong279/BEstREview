@@ -1,44 +1,83 @@
+/* 제목 스타일 */
 .Review_text {
   text-align: center;
   color: #3a278b;
   font-family: "KIMM_Bold", sans-serif;
+  font-size: 5vw;
+  margin-bottom: 2vh;
 }
+
+/* 로고 스타일 */
 .Review_Check_Logo {
   display: block;
   margin: 0 auto;
-  width: 10%;
-  height: 10%;
+  width: 30vh;
+  height: 30vh;
 }
+
+/* 입력창 스타일 */
 .Review_Check_input {
-  width: 400;
-  border-radius: 10px;
+  width: 60vw;
+  border-radius: 50em;
   background-color: #9fa9e9;
   color: white;
   padding: 10px;
+  height: 6vh;
+  font-size: 1.2em;
+  margin-bottom: 3vh;
+  position: relative;
+  z-index: 1;
 }
 
-.Review_Check_input::placeholder {
-  color: white;
-  opacity: 1;
-}
-
-.Review_Check_input:hover {
+/* 버튼 호버 및 포커스 스타일 */
+.Review_Check_input:hover,
+.Review_Check_input:focus,
+.button:hover,
+.button:focus {
   background-color: #9fa9e9;
   border-color: #9fa9e9;
-}
-
-.Review_Check_input:focus {
-  background-color: #9fa9e9;
-  border-color: #9fa9e9;
   color: white;
 }
 
-.button {
-  margin-left: -50;
-  border-radius: 10px;
-  color: #9fa9e9;
-  background-color: white;
-}
-.url-input-container {
+/* 체크 섹션 스타일 */
+.check {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 버튼 스타일 */
+.check_form {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1.5vw;
+  position: relative;
+}
+
+/* 버튼 스타일 */
+.check_form button {
+  margin-top: -1vh;
+  margin-left: 57vw;
+  border-radius: 50%;
+  color: #3a278b;
+  background-color: transparent;
+  font-size: 3vw;
+  height: 6vh;
+  width: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+  z-index: 1;
 }
