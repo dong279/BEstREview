@@ -14,9 +14,7 @@ export const Footer = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto" id="text_footer">
               <Nav.Link href="/Review_Check">이용약관</Nav.Link>
-              <Navbar.Brand>
-                <img src={footerlogo} alt="footerlogo" />
-              </Navbar.Brand>
+              <img src={footerlogo} alt="footerlogo" />
               <Nav.Link href="/Inquiry">문의하기</Nav.Link>
             </Nav>
           </Navbar.Collapse>

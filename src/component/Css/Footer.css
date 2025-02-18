@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "D2Coding", sans-serif;
+  box-sizing: border-box;
 }
 
 /* 푸터 컨테이너 */
@@ -21,11 +22,20 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #text_footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 1.2vw;
   width: 100%;
+}
+
+#Footer_Nav img {
+  width: 3.5vw;
+  height: 6vh;
 }
