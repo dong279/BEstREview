@@ -21,7 +21,7 @@
 #titlelogo {
   width: 20vw;
   height: auto;
-  margin-left: 10vw;
+  margin-left: 4vw;
   padding-bottom: 3vh;
 }
 
@@ -32,7 +32,6 @@
   gap: 5em;
   font-size: 1vw;
   width: 100%;
-  white-space: nowrap;
 }
 
 /* 네비게이션 링크 스타일 */

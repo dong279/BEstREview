@@ -12,7 +12,7 @@ export const Footer = () => {
       <Navbar id="Footer_Nav">
         <Container id="container_footer">
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto" id="text_footer">
               <Nav.Link href="/Review_Check">이용약관</Nav.Link>
               <Navbar.Brand>
                 <img src={footerlogo} alt="footerlogo" />
