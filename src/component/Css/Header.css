@@ -1,37 +1,50 @@
-/* 기본 헤더 스타일 */
-#container_header {
-  display: flex;
-  justify-content: space-between; /* 기본적으로 로고 왼쪽, 메뉴 오른쪽 */
-  align-items: center;
-  gap: 3vw;
-  margin: 0 auto;
-  min-width: 1200px; /* 최소 너비 설정 */
-}
-
-#text {
-  padding-top: 1.5em;
-  gap: 1vw;
-  font-size: 2em;
-}
-
-#titlelogo {
-  width: 500px;
-  display: block;
-  padding: 0;
-  margin: 0;
-  min-width: 500px;
-}
-
-#Nav_header {
-  width: 100%;
-  height: 150px;
-  min-width: 1200px;
-}
-
-hr {
-  border: 2px solid #39278b;
-}
-
+/* 기본 스타일 설정 */
 * {
   font-family: "D2Coding", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 전체 헤더 컨테이너 */
+#container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 4vw;
+  position: relative;
+}
+
+/* 로고 */
+#titlelogo {
+  width: 20vw;
+  height: auto;
+  margin-left: 10vw;
+  padding-bottom: 3vh;
+}
+
+/* 메뉴 텍스트 */
+#text {
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+  font-size: 1vw;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* 네비게이션 링크 스타일 */
+#text .nav-link {
+  font-size: 1.5vw;
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+
+/* 네비게이션 바 */
+#Nav_header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

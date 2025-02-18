@@ -8,13 +8,11 @@ import "./Css/Header.css";
 export const Header = () => {
   return (
     <>
-      <Navbar expand="lg" className="bg-white" id="Nav_header">
+      <Navbar className="bg-white" id="Nav_header">
         <Container id="container_header">
           <Navbar.Brand href="/">
             <img src={titlelogo} alt="mainlogo" id="titlelogo" />
           </Navbar.Brand>
-          {/* 햄버거 메뉴 버튼 */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggle" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto" id="text">
               <Nav.Link href="/Review_Check">리뷰조회</Nav.Link>

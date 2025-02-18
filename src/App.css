@@ -34,3 +34,7 @@
   font-weight: normal;
   font-style: normal;
 }
+hr {
+  border: 0.5vh solid #39278b;
+  margin: 0.1vh 0;
+}

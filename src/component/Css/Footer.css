@@ -1,14 +1,38 @@
-#container_footer {
-  display: flex; /* Flexbox로 설정 */
-  flex-direction: column; /* 세로 방향으로 배치 */
-  align-items: center; /* 가로로 가운데 정렬 */
-  justify-content: space-between; /* 텍스트 사이에 간격을 고르게 배치 */
-  height: 50px;
+/* 기본 스타일 설정 */
+* {
+  margin: 0;
+  padding: 0;
   font-family: "D2Coding", sans-serif;
 }
 
+/* 푸터 컨테이너 */
+#container_footer {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  gap: 10%; 
+  height: 150px;
+  width: 100%; 
+  padding: 1rem; 
+  position: relative;
+}
+
+/* 푸터 네비게이션 */
 #Footer_Nav {
-  width: 100%; /* 화면 전체 너비 */
-  height: 100px; /* 고정 높이 */
-  margin-top: auto;
+  width: 100%;
+  min-width: 1200px; /
+}
+
+/* 푸터 로고 이미지 */
+#Footer_Nav img {
+  height: auto;
+  width: 4vw; 
+}
+
+/* 네비게이션 링크 */
+#Footer_Nav .nav-link {
+  font-size: 1.2em; 
+  padding: 0.5rem 1rem; 
+  color: #000; 
+  text-decoration: none; 
 }
