@@ -8,7 +8,7 @@ import "./Css/Header.css";
 export const Header = () => {
   return (
     <>
-      <Navbar className="bg-white" id="Nav_header">
+      <Navbar id="Nav_header">
         <Container id="container_header">
           <Navbar.Brand href="/">
             <img src={titlelogo} alt="mainlogo" id="titlelogo" />

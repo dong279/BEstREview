@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <>
       <hr />
-      <Navbar className="bg-white" id="Footer_Nav">
+      <Navbar id="Footer_Nav">
         <Container id="container_footer">
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
