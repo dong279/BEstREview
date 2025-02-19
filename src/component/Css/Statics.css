@@ -1,0 +1,29 @@
+/* 기본 스타일 */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 2rem; /* 화면 크기에 맞게 여백을 조절 */
+}
+
+.ant-form {
+  width: 100%;
+}
+
+.ant-form-item {
+  margin-bottom: 1rem;
+}
+
+.ant-form-item-label {
+  font-size: 1.2em; /* 레이블의 폰트 크기 */
+}
+
+.ant-input {
+  font-size: 1em; /* 인풋 창의 폰트 크기 */
+}
+
+.ant-btn {
+  font-size: 1.2em; /* 버튼 폰트 크기 */
+  padding: 0.8rem;
+}

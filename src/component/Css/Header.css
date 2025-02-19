@@ -1,11 +1,9 @@
-/* 기본 스타일 설정 */
 * {
   font-family: "D2Coding", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* 전체 헤더 컨테이너 */
 #container_header {
   display: flex;
   justify-content: space-between;
@@ -17,7 +15,6 @@
   position: relative;
 }
 
-/* 로고 */
 #titlelogo {
   width: 20vw;
   height: auto;
@@ -26,7 +23,6 @@
   padding-right: 0;
 }
 
-/* 메뉴 텍스트 */
 #text {
   display: flex;
   justify-content: space-between;
@@ -35,14 +31,12 @@
   width: 100%;
 }
 
-/* 네비게이션 링크 스타일 */
 #text .nav-link {
   font-size: 1.5vw;
   padding: 0.5em 1em;
   display: inline-block;
 }
 
-/* 네비게이션 바 */
 #Nav_header {
   width: 100%;
   margin: 0;

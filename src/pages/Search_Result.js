@@ -11,7 +11,6 @@ export const Search_Result = () => {
   const [text4, setText4] = useState("");
   const [text5, setText5] = useState("");
 
-  // 백엔드에서 텍스트와 정확도 값 받아오는 함수
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -62,10 +61,8 @@ export const Search_Result = () => {
       <Header />
       <div className="page-container">
         <div className="parent">
-          {/* div1: 조회결과 텍스트 */}
           <div className="div1">조회결과</div>
 
-          {/* div2: Progress 원 */}
           <div className="div2">
             <Progress
               type="circle"
@@ -83,7 +80,6 @@ export const Search_Result = () => {
             </div>
           </div>
 
-          {/* div3, div4, div5: 백엔드에서 받아온 텍스트 표시 */}
           <div className="div3">{text3 || ""}</div>
           <div className="div4">{text4 || ""}</div>
           <div className="div5">{text5 || ""}</div>

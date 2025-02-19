@@ -3,10 +3,11 @@ import { Footer } from "../component/Footer";
 import { Header } from "../component/Header";
 import "../component/Css/Review_Check.css";
 import logo from "../Search_Check_Back.png";
-import { Input, Button, Modal, Spin } from "antd";
+import { Input, Button, Spin } from "antd";
 import axios from "axios";
 import { RightCircleOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import Modal from "./Modal";
 
 export const Review_Check = () => {
   const [url, setUrl] = useState("");
@@ -27,7 +28,6 @@ export const Review_Check = () => {
     setLoading(true);
 
     try {
-      // 백엔드 API로 URL 전송 (예: POST 요청)
       const response = await axios.post(
         "https://your-backend-url/api/submit-url",
         {
@@ -45,21 +45,20 @@ export const Review_Check = () => {
         }
       );
 
-      console.log("Response from backend: ", response.data); // 백엔드 응답 처리
+      console.log("Response from backend: ", response.data);
 
-      // 백엔드 응답이 성공적이면, 다른 페이지로 이동
       navigate("/Search_Result");
     } catch (error) {
       console.error("There was an error submitting the URL: ", error);
       setError("There was an error submitting the URL. Please try again.");
       setIsModalVisible(true);
     } finally {
-      setLoading(false); // 로딩 종료
+      setLoading(false);
     }
   };
 
   const handleModalClose = () => {
-    setIsModalVisible(false); // 모달 닫기
+    setIsModalVisible(false);
   };
 
   return (
@@ -89,7 +88,6 @@ export const Review_Check = () => {
           </form>
         </div>
 
-        {/* 진행률 표시 */}
         {loading && (
           <div
             className="progress-container"
@@ -99,18 +97,11 @@ export const Review_Check = () => {
           </div>
         )}
 
-        {/* 에러 모달 */}
         <Modal
-          title="Error"
           visible={isModalVisible}
-          onOk={handleModalClose}
-          onCancel={handleModalClose}
-          okText="Confirm"
-          cancelText="Cancel"
-          centered
-        >
-          <p>{error}</p> {/* 에러 메시지 표시 */}
-        </Modal>
+          error={error}
+          onClose={handleModalClose}
+        />
       </div>
       <Footer />
     </>

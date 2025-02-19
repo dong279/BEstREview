@@ -12,14 +12,12 @@
 .parent {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-gap: 0px;
+  grid-template-rows: repeat(8, 1fr);
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* 각 그리드 영역 스타일 */
 .div1 {
   grid-area: 1 / 1 / 3 / 3;
   font-size: 48px;

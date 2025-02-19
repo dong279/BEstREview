@@ -26,7 +26,6 @@ function App() {
       </Routes>
     </Router>
   );
-  //주석
 }
 
 export default App;
