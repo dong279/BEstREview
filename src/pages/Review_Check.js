@@ -4,7 +4,6 @@ import { Header } from "../component/Header";
 import "../component/Css/Review_Check.css";
 import logo from "../Search_Check_Back.png";
 import { Input, Button, Spin } from "antd";
-import axios from "axios";
 import { RightCircleOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import Modal from "./Modal";
@@ -28,26 +27,25 @@ export const Review_Check = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(
-        "https://your-backend-url/api/submit-url",
-        {
-          url: url,
+      const response = await fetch("http://localhost:3000/URL", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        {
-          onUploadProgress: (progressEvent) => {
-            if (progressEvent.total) {
-              const percent = Math.round(
-                (progressEvent.loaded / progressEvent.total) * 100
-              );
-              setProgress(percent);
-            }
-          },
-        }
-      );
+        body: JSON.stringify({
+          url: url,
+        }),
+      });
 
-      console.log("Response from backend: ", response.data);
+      const data = await response.json();
 
-      navigate("/Search_Result");
+      if (response.ok) {
+        console.log("Response from backend: ", data);
+        navigate("/Search_Result");
+      } else {
+        setError(data.message || "There was an error processing your request.");
+        setIsModalVisible(true);
+      }
     } catch (error) {
       console.error("There was an error submitting the URL: ", error);
       setError("There was an error submitting the URL. Please try again.");

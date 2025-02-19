@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Footer } from "../component/Footer";
 import { Header } from "../component/Header";
-import axios from "axios";
 import "../component/Css/Search_Result.css";
 import { Progress } from "antd";
 
@@ -14,12 +13,22 @@ export const Search_Result = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://your-backend-url/api/data");
+        const response = await fetch("http://localhost:3000/URL", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            url: "11번가상품URL",
+          }),
+        });
 
-        setAccuracy(response.data.accuracy);
-        setText3(response.data.text3);
-        setText4(response.data.text4);
-        setText5(response.data.text5);
+        const data = await response.json();
+
+        setAccuracy(data.accuracy);
+        setText3(data.text3);
+        setText4(data.text4);
+        setText5(data.text5);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
@@ -57,7 +66,7 @@ export const Search_Result = () => {
   };
 
   return (
-    <>
+    <div className="result_body">
       <Header />
       <div className="page-container">
         <div className="parent">
@@ -86,6 +95,6 @@ export const Search_Result = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
