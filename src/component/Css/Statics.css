@@ -1,16 +1,32 @@
-/* ProgressUI.css */
+.staticmain {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
 
 .progress-container {
+  flex-grow: 1;
   padding: 2rem;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.static_card {
+  position: relative;
+  width: 30vw;
+  flex-grow: 1;
 }
 
 .ant-card {
-  border-radius: 10px;
+  border-radius: 10px; /* 카드 모서리 둥글게 */
+  padding: 1rem; /* 카드 내부 여백 */
 }
 
 .ant-card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .ant-progress {

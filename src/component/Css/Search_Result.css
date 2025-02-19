@@ -45,10 +45,10 @@
 .div3,
 .div4,
 .div5 {
-  border: 2px solid #9fa9e9;
+  border: 0.2vw solid #9fa9e9;
   padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  margin-bottom: 5vh;
+  border-radius: 1vw;
 }
 .div3 {
   grid-area: 2 / 6 / 4 / 9;
