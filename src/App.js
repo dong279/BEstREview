@@ -19,7 +19,10 @@ function App() {
         <Route path="Inquiry" element={<Inquiry />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Record" element={<Record />} />
-        <Route path="/Result_Details" element={<Search_Result_Details />} />
+        <Route
+          path="/Search_Result_Details"
+          element={<Search_Result_Details />}
+        />
         <Route path="/Search_Result" element={<Search_Result />} />
         <Route path="/Statics" element={<Statics />} />
         <Route path="/Review_Check" element={<Review_Check />} />

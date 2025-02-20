@@ -3,6 +3,7 @@ import { Footer } from "../component/Footer";
 import { Header } from "../component/Header";
 import "../component/Css/Search_Result.css";
 import { Progress } from "antd";
+import { useNavigate } from "react-router-dom"; // useHistory를 useNavigate로 수정
 
 export const Search_Result = () => {
   const [accuracy, setAccuracy] = useState(null);
@@ -52,6 +53,7 @@ export const Search_Result = () => {
   };
 
   const calculateProgress = (accuracy) => {
+    if (accuracy === null) return 0;
     if (accuracy >= 90) {
       return 100;
     } else if (accuracy >= 80) {
@@ -65,12 +67,20 @@ export const Search_Result = () => {
     }
   };
 
+  const navigate = useNavigate();
+
+  const button1 = () => {
+    navigate("/Search_Result_Details");
+  };
+
   return (
     <div className="result_body">
       <Header />
       <div className="page-container">
         <div className="parent">
-          <div className="div1">조회결과</div>
+          <button onClick={button1} className="div1">
+            상세보기
+          </button>
 
           <div className="div2">
             <Progress

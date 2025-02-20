@@ -62,13 +62,12 @@ export const Login = () => {
                 로그인
               </Button>
             </Form.Item>
-
-            <Form.Item className="srh">
-              <Link to="/Inquiry">아이디찾기</Link>
-              <Link to="/Inquiry">비밀번호찾기</Link>
-              <Link to="/Inquiry">회원가입</Link>
-            </Form.Item>
           </Form>
+          <Form.Item className="srh">
+            <Link to="/Inquiry">아이디찾기</Link>
+            <Link to="/Inquiry">비밀번호찾기</Link>
+            <Link to="/Inquiry">회원가입</Link>
+          </Form.Item>
         </div>
       </div>
       <Footer />
