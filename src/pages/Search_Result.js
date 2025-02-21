@@ -3,7 +3,7 @@ import { Footer } from "../component/Footer";
 import { Header } from "../component/Header";
 import "../component/Css/Search_Result.css";
 import { Progress } from "antd";
-import { useNavigate } from "react-router-dom"; // useHistory를 useNavigate로 수정
+import { useNavigate } from "react-router-dom";
 
 export const Search_Result = () => {
   const [accuracy, setAccuracy] = useState(null);

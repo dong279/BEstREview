@@ -20,9 +20,9 @@
   background-color: #9fa9e9;
   color: white;
   padding: 10px;
-  height: 6vh;
-  font-size: 1.2em;
-  margin-bottom: 3vh;
+  height: 3.5vw;
+  font-size: 2vw;
+  margin-bottom: 3vw;
   position: relative;
   z-index: 1;
 }
@@ -61,15 +61,24 @@
   border-radius: 50%;
   color: #3a278b;
   background-color: transparent;
-  font-size: 3vw;
-  height: 6vh;
-  width: 6vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50%;
+  top: 38%;
   transform: translateY(-50%);
   transition: background-color 0.3s ease;
   z-index: 1;
+}
+.button {
+  width: 3vw !important;
+  height: 2.9vw !important;
+  font-size: 3.2vw;
+}
+.check_form button:hover,
+.check_form button:focus {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #3a278b !important;
 }
