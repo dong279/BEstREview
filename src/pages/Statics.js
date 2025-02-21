@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer } from "../component/Footer";
 import { Header } from "../component/Header";
-import { Progress, Card, Row, Col } from "antd";
+import { Progress, Card } from "antd";
 import "../component/Css/Statics.css";
 
 export const Statics = () => {
@@ -17,15 +17,13 @@ export const Statics = () => {
     <div className="staticmain">
       <Header />
       <div className="progress-container">
-        <Row gutter={[16, 16]}>
-          {tasks.map((task, index) => (
-            <Col span={8} key={index}>
-              <Card className="static_card" title={task.name} bordered={false}>
-                <Progress percent={task.value} showInfo={true} />
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        {tasks.map((task, index) => (
+          <div className="static_card" key={index}>
+            <Card className="static_card" title={task.name} bordered={false}>
+              <Progress percent={task.value} showInfo={true} />
+            </Card>
+          </div>
+        ))}
       </div>
       <Footer />
     </div>
