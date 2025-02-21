@@ -12,7 +12,7 @@ export const Login = () => {
   };
 
   return (
-    <>
+    <div className="login_all">
       <div className="login-container">
         <div className="Login">
           <div className="login_main_logo">
@@ -37,7 +37,11 @@ export const Login = () => {
                 },
               ]}
             >
-              <Input prefix={<UserOutlined />} placeholder="아이디" />
+              <Input
+                className="input_input"
+                prefix={<UserOutlined />}
+                placeholder="아이디"
+              />
             </Form.Item>
 
             <Form.Item
@@ -51,6 +55,7 @@ export const Login = () => {
               ]}
             >
               <Input
+                className="password_pw"
                 prefix={<LockOutlined />}
                 type="password"
                 placeholder="비밀번호"
@@ -58,7 +63,12 @@ export const Login = () => {
             </Form.Item>
 
             <Form.Item className="Login_btn">
-              <Button block type="primary" htmlType="submit">
+              <Button
+                className="Login_btn_btn"
+                block
+                type="primary"
+                htmlType="submit"
+              >
                 로그인
               </Button>
             </Form.Item>
@@ -71,6 +81,6 @@ export const Login = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };

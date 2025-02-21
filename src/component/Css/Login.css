@@ -1,95 +1,97 @@
-/* 로그인 로고 */
-.Login_Logo {
-  width: 12vw;
-  height: auto;
-  padding-bottom: 1.2vh;
+.login_all {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-/* 로그인 컨테이너 */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  height: 85vh;
-  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
-/* 로그인 섹션 */
 .Login {
-  display: flex;
   justify-content: center;
-  align-items: center;
+  width: 100%;
+  display: flex;
   flex-direction: column;
-  width: 100%;
+  align-items: center;
   height: 100%;
-}
-
-/* 로그인 폼 */
-.login-form .ant-input,
-.login-form .ant-btn {
-  width: 100%; /* 너비 100%로 설정 */
-  border-radius: 0.5vw; /* 둥근 모서리 */
-}
-
-.login-form .ant-input {
-  height: 2.5vw;
-  font-size: 1vw;
-}
-.login-form .ant-btn {
-  height: 2.5vw;
-  width: 25vw;
-  font-size: 1vw;
-}
-/* 인풋창 안의 플레이스홀더 텍스트 스타일 */
-.login-form .ant-input::placeholder {
-  font-size: 1vw; /* 플레이스홀더 글자 크기 */
-}
-
-/* 버튼 스타일 */
-.login-form .ant-btn-primary {
-  background-color: #1890ff;
-  border-color: #1890ff;
-}
-
-.login-form .ant-btn-primary:hover {
-  background-color: #40a9ff;
-  border-color: #40a9ff;
-}
-
-/* 에러 메시지 */
-.login-form .ant-form-item-explain-error {
-  color: red;
-  font-size: 0.8vw;
-  width: 100%;
-}
-
-/* 텍스트 스타일 */
-.Login_text1 {
-  color: #3a278b;
-  font-family: "ghanachoco", sans-serif;
-  font-size: 3vw;
-  padding-top: 10vw;
-  margin-bottom: 2vh;
 }
 
 .login_main_logo {
   display: flex;
-  padding-bottom: 5vh;
+  flex-direction: column;
+  align-items: center;
+  color: #3a278b;
+  margin-bottom: 0.5vw;
+}
+
+.Login_Logo {
+  width: 12vw;
+  height: auto;
+}
+
+.Login_text1 {
+  font-size: 4vw;
+  font-weight: bold;
+  margin-top: 1vw;
+  font-family: "ghanachoco", sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.id,
+.password,
+.Login_btn {
+  margin-bottom: 1vw;
+  width: 100%;
+}
+
+.ant-form-item-explain {
+  font-size: 1.2vw !important;
+  color: red;
+}
+
+.input_input,
+.password_pw {
+  height: 3vw;
+  padding: 0 2vw;
+  font-size: 1.2vw;
+  border-radius: 1vw;
+  box-sizing: border-box;
+}
+
+.Login_btn_btn {
+  width: 100%;
+  height: 3vw;
+  font-size: 1.2vw;
+  color: white;
+  border-radius: 1vw;
 }
 
 .srh {
+  margin-top: 1vw;
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
-  font-size: 1em;
+  position: relative;
 }
 
 .srh a {
-  text-decoration: none;
+  font-size: 1.2vw;
   color: black;
-  margin: 0 1rem;
-  width: auto;
+  text-decoration: none;
+  margin: 0 2vw;
+}
+
+footer {
+  margin-top: auto;
 }
