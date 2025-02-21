@@ -94,11 +94,10 @@ export const Search_Result = () => {
                   : "Loading..."
               }
             />
-            <div className="grade">
-              {accuracy !== null ? calculateGrade(accuracy) : "A"}
-            </div>
           </div>
-
+          <div className="grade">
+            {accuracy !== null ? calculateGrade(accuracy) : "A"}
+          </div>
           <div className="div3">{text3 || ""}</div>
           <div className="div4">{text4 || ""}</div>
           <div className="div5">{text5 || ""}</div>

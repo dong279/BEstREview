@@ -21,7 +21,7 @@
 }
 
 .div1 {
-  grid-area: 1 / 1 / 2/ 2;
+  grid-area: 1 / 1 / 2 / 2;
   font-size: 1.5vw;
   text-align: center;
   position: relative;
@@ -32,17 +32,22 @@
 
 .div2 {
   grid-area: 4 / 2 / 8 / 5;
-  z-index: 2;
   position: absolute;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .grade {
+  position: absolute;
+  top: 53%;
+  left: 27%;
+  transform: translate(-50%, -50%);
   font-size: 30vw;
   font-family: "ghanachoco", sans-serif;
+  z-index: 2;
 }
 
 .div3,
@@ -53,15 +58,19 @@
   margin-bottom: 5vh;
   border-radius: 1vw;
 }
+
 .div3 {
   grid-area: 3 / 6 / 6 / 9;
 }
+
 .div4 {
   grid-area: 6 / 6 / 9 / 9;
 }
+
 .div5 {
   grid-area: 9 / 6 / 12 / 9;
 }
+
 .ant-progress-circle {
   position: absolute;
   top: 50%;
@@ -88,6 +97,7 @@
 .ant-progress-circle .ant-progress-ring-path {
   stroke-width: 50em !important;
 }
+
 .div3,
 .div4,
 .div5 {
@@ -96,6 +106,7 @@
   padding: 10px;
   text-align: center;
 }
+
 .result_body {
   height: 100vh;
 }
