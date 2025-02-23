@@ -27,7 +27,6 @@ export const Review_Check = () => {
     setLoading(true);
 
     try {
-      // 백엔드 서버에 POST 요청 보내기
       const response = await fetch("http://localhost:3000/URL", {
         method: "POST",
         headers: {
@@ -42,7 +41,7 @@ export const Review_Check = () => {
 
       if (response.ok) {
         console.log("Response from backend: ", data);
-        navigate("/Search_Result"); // 요청 성공 시 /Search_Result로 이동
+        navigate("/Search_Result");
       } else {
         setError(data.message || "There was an error processing your request.");
         setIsModalVisible(true);
