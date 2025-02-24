@@ -1,0 +1,10 @@
+.HomeImg {
+  width: 100%;
+  height: auto;
+}
+.introduce {
+  height: 1000px;
+}
+* {
+  font-family: "D2Coding", sans-serif;
+}
