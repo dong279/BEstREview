@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export const Search_Result = () => {
   const location = useLocation();
-  const { accuracy, text3, text4, text5, reviews, url } = location.state || {};
+  const { accuracy, text3, text4, text5, reviews } = location.state || {};
   const navigate = useNavigate();
 
   const calculateGrade = (accuracy) => {
@@ -41,7 +41,7 @@ export const Search_Result = () => {
 
   const button1 = () => {
     navigate("/Search_Result_Details", {
-      state: { reviews, accuracy, text3, text4, text5 },
+      state: { reviews, accuracy },
     });
   };
 
