@@ -7,7 +7,7 @@ import "../component/Css/Search_Result_Details.css";
 
 export const Search_Result_Details = () => {
   const location = useLocation();
-  const { reviews } = location.state || {}; // 전달받은 데이터
+  const { reviews } = location.state || {};
 
   return (
     <div className="result-container">

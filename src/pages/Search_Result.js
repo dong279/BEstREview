@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export const Search_Result = () => {
   const location = useLocation();
-  const { accuracy, text3, text4, text5, reviews, url } = location.state || {}; // URL과 다른 데이터를 받아옵니다.
+  const { accuracy, text3, text4, text5, reviews, url } = location.state || {};
   const navigate = useNavigate();
 
   const calculateGrade = (accuracy) => {
