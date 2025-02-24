@@ -1,19 +1,13 @@
 import React from "react";
 import { Footer } from "../component/Footer";
 import { Header } from "../component/Header";
-import { List } from "antd";
+import { List, Card, Rate } from "antd";
+import { useLocation } from "react-router-dom";
 import "../component/Css/Search_Result_Details.css";
 
-const generateRandomData = (num) => {
-  return Array.from({ length: num }).map((_, i) => ({
-    name: `김철수 ${i}`,
-    date: `2019.01.${String((i % 30) + 1).padStart(2, "0")}`,
-    contentDetail: `abcdefg ${i}`,
-  }));
-};
-
 export const Search_Result_Details = () => {
-  const data = generateRandomData(200);
+  const location = useLocation();
+  const { reviews } = location.state || {}; // 전달받은 데이터
 
   return (
     <div className="result-container">
@@ -25,21 +19,36 @@ export const Search_Result_Details = () => {
           size="large"
           pagination={{
             pageSize: 5,
-            total: data.length,
+            total: reviews.length,
             onChange: (page) => {
               console.log(page);
             },
             showSizeChanger: false,
             position: "bottom",
           }}
-          dataSource={data}
+          dataSource={reviews}
           renderItem={(item) => (
-            <List.Item className="Detail_Title" key={item.name}>
-              <List.Item.Meta
-                title={<a href={item.href}>{item.name}</a>}
-                description={item.date}
-              />
-              <div className="content-detail">{item.contentDetail}</div>{" "}
+            <List.Item className="Detail_Title" key={item.content}>
+              <Card
+                title={
+                  <h4 className="card-title">{item.name || "No Title"}</h4>
+                }
+                extra={
+                  <span className="card-extra">{item.date || "No Date"}</span>
+                }
+                className="card-container"
+              >
+                <div className="content-detail">
+                  <p> {item.content || "No Review Content"}</p>
+                  <p>
+                    <strong>Rating:</strong>
+                    <Rate
+                      disabled
+                      defaultValue={parseFloat(item.rating) || 0}
+                    />
+                  </p>
+                </div>
+              </Card>
             </List.Item>
           )}
         />

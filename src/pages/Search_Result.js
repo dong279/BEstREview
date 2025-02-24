@@ -3,40 +3,12 @@ import { Footer } from "../component/Footer";
 import { Header } from "../component/Header";
 import "../component/Css/Search_Result.css";
 import { Progress } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Search_Result = () => {
-  const [accuracy, setAccuracy] = useState(null);
-  const [text3, setText3] = useState("");
-  const [text4, setText4] = useState("");
-  const [text5, setText5] = useState("");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/URL", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            url: "11번가상품URL",
-          }),
-        });
-
-        const data = await response.json();
-
-        setAccuracy(data.accuracy);
-        setText3(data.text3);
-        setText4(data.text4);
-        setText5(data.text5);
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const location = useLocation();
+  const { accuracy, text3, text4, text5, reviews, url } = location.state || {}; // URL과 다른 데이터를 받아옵니다.
+  const navigate = useNavigate();
 
   const calculateGrade = (accuracy) => {
     if (accuracy >= 90) {
@@ -67,10 +39,10 @@ export const Search_Result = () => {
     }
   };
 
-  const navigate = useNavigate();
-
   const button1 = () => {
-    navigate("/Search_Result_Details");
+    navigate("/Search_Result_Details", {
+      state: { reviews, accuracy, text3, text4, text5 },
+    });
   };
 
   return (
