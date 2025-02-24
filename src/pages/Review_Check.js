@@ -12,7 +12,7 @@ export const Review_Check = () => {
   const [url, setUrl] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [progress, setProgress] = useState(0); // 진행 상태 추가
+  const [progress, setProgress] = useState(0);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ export const Review_Check = () => {
 
   const validateUrl = (url) => {
     try {
-      new URL(url); // URL 객체를 이용하여 URL 유효성 검사
+      new URL(url);
       return true;
     } catch (e) {
       return false;
@@ -34,7 +34,6 @@ export const Review_Check = () => {
     setError(null);
     setProgress(0);
 
-    // URL 형식이 잘못된 경우 에러 처리
     if (!validateUrl(url)) {
       setError(
         "유효하지 않은 URL입니다. http:// 또는 https://로 시작해야 합니다."
@@ -67,7 +66,7 @@ export const Review_Check = () => {
             text3: data.text3,
             text4: data.text4,
             text5: data.text5,
-            url: url, // URL을 추가하여 넘겨줌
+            url: url,
           },
         });
       } else {
