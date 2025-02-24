@@ -1,0 +1,48 @@
+* {
+  font-family: "D2Coding", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 4vw;
+  position: relative;
+}
+
+#titlelogo {
+  width: 20vw;
+  height: auto;
+  margin-left: 4vw;
+  padding-bottom: 3vh;
+  padding-right: 0;
+}
+
+#text {
+  display: flex;
+  justify-content: space-between;
+  gap: 5em;
+  font-size: 1vw;
+  width: 100%;
+}
+
+#text .nav-link {
+  font-size: 1.5vw;
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+
+#Nav_header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11vh;
+}

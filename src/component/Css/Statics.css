@@ -1,0 +1,38 @@
+.staticmain {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  justify-content: space-between;
+}
+
+.progress-container {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.static_card {
+  position: relative;
+  min-width: 400px;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.ant-card {
+  border-radius: 1vw;
+  padding: 1rem;
+  width: 100%;
+}
+
+.ant-progress {
+  margin-top: 1rem;
+}

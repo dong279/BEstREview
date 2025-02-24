@@ -1,0 +1,112 @@
+.page-container {
+  background-image: url("../../Search_Check_Background.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  font-size: 1.5vw;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.div2 {
+  grid-area: 4 / 2 / 8 / 5;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.grade {
+  position: absolute;
+  top: 53%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+  font-size: 30vw;
+  font-family: "ghanachoco", sans-serif;
+  z-index: 2;
+}
+
+.div3,
+.div4,
+.div5 {
+  border: 0.2vw solid #9fa9e9;
+  padding: 15px;
+  margin-bottom: 5vh;
+  border-radius: 1vw;
+}
+
+.div3 {
+  grid-area: 3 / 6 / 6 / 9;
+}
+
+.div4 {
+  grid-area: 6 / 6 / 9 / 9;
+}
+
+.div5 {
+  grid-area: 9 / 6 / 12 / 9;
+}
+
+.ant-progress-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 30vw !important;
+  height: 31vw !important;
+}
+
+.ant-progress-circle .ant-progress-inner {
+  width: 30vw !important;
+  height: 31vw !important;
+}
+
+.ant-progress-circle .ant-progress-background {
+  width: 50px !important;
+}
+
+.ant-progress-circle .ant-progress-text {
+  display: none;
+}
+
+.ant-progress-circle .ant-progress-ring-path {
+  stroke-width: 50em !important;
+}
+
+.div3,
+.div4,
+.div5 {
+  grid-column: 6 / 10;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.result_body {
+  height: 100vh;
+}
